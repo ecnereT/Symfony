@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-center">Post</h1>
+    <table>
+        <tbody>
+            <tr>
+                <th>Image</th>
+                <td>
+                    {% if post.getImage %}
+                        <img src="{{ asset('uploads/pictures/' ~ post.getImage) }}" alt="No image was set for this post">
+                    {% else %}
+                        No image was set for this post
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ post.title }}</td>
+            </tr>
+            <tr>
+                <th>Extrait</th>
+                <td>{{ post.summary }}</td>
+            </tr>
+            <tr>
+                <th>Contenu</th>
+                <td>{{ post.content }}</td>
+            </tr>
+            <tr>
+                <th>Créé le</th>
+                <td>{% if post.createdAt %}{{ post.createdAt|date('Y-m-d à H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Par</th>
+                <td>
+                    {% if post.user %}
+                        {{ post.user.username }}
+                    {% else %}
+                        <i>Annonymous</i>
+                    {% endif %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('post_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('post_edit', { 'id': post.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+            
+    <hr>
+    <h1>Comments</h1>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <input type="submit" value="Create" />
+        {{ form_end(form) }}
+    {% endif %}
+
+    <h3>Commentaires :</h3>
+    {% for comment in comments %}
+        <hr>
+        <i>Posté par: <b>{{ comment.user.username|title }}</b> le <em>{{ comment.createdAt.date|date('d/m/y à h:i') }}</em></i>
+        <p>{{ comment.comment }}</p>
+        <li>
+            <a href="{{ path('comment_edit', { 'id': comment.id }) }}">Modifier</a>
+        </li>
+        <li>
+            <a href="{{ path('comment_delete', { 'id': comment.id }) }}">Supprimer</a>
+        </li>
+    {% endfor %}
+{% endblock %}

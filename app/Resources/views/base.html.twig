@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            
+        {% endblock %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('app/scss/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('app/css/font-awesome.css') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% set dirPath = "http://localhost/symfony3/web/app_dev.php" %}
+                    {% if is_granted('ROLE_USER') %}
+                        <a class="btn btn-primary" href="{{ dirPath }}/logout" role="button">Se déconnecter</a>
+                    {% else %}
+                        <a class="btn btn-primary" href="{{ dirPath }}/login" role="button">Se connecter</a>
+                    {% endif %}
+                </div>
+            </div>
+      
+            {% block body %}{% endblock %}
+            {% block javascripts %}
+
+            {% endblock %}
+        </div>
+        <script src="{{ asset('app/scripts/bootstrap.min.js') }}"></script>
+    </body>
+</html>

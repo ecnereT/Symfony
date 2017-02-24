@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/AppBundle/DataFixtures/ORM/LoadUser.php</file>
+            <file>file:/C:/wamp64/www/symfony3/app/config/security.yml</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Controller/BlogController.php</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Resources/views/post/new.html.twig</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Resources/config/routing/comment.yml</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Form/PostType.php</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Resources/views/post/show.html.twig</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Entity/Post.php</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Controller/PostController.php</file>
+            <file>file:/C:/wamp64/www/symfony3/app/Resources/views/layouts/blog.html.twig</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/DataFixtures/ORM/LoadPost.php</file>
+            <file>file:/C:/wamp64/www/symfony3/app/config/config.yml</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Repository/PostRepository.php</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Resources/config/routing/post.yml</file>
+            <file>file:/C:/wamp64/www/symfony3/app/AppKernel.php</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/AppBundle/Entity/User.php</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Entity/Comment.php</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Resources/views/Blog/index.html.twig</file>
+            <file>file:/C:/wamp64/www/symfony3/app/config/routing.yml</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Resources/views/post/index.html.twig</file>
+            <file>file:/C:/wamp64/www/symfony3/src/IKNSA/BlogBundle/Resources/views/post/edit.html.twig</file>
+        </group>
+    </open-files>
+</project-private>
